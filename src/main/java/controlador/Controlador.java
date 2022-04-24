@@ -30,13 +30,13 @@ public class  Controlador implements ActionListener {
         view.setLocationRelativeTo(null); //null es para que la ventana inicie en el centro de la pantalla ( posición cero)
     }
     
-    @Override
     public void actionPerformed(ActionEvent e){ //recibe un evento
         
         model.setNumeroUno(Integer.parseInt(view.txtNumero1.getText()));
-        model.setNumeroUno(Integer.parseInt(view.txtNumero2.getText()));
+        model.setNumeroDos(Integer.parseInt(view.txtNumero2.getText()));
         model.Multiplicar();
         view.txtResultado.setText(String.valueOf(model.getResultado()));
+        
     }
     
 }

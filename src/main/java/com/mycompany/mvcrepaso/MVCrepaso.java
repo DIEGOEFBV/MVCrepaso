@@ -5,6 +5,10 @@
 
 package com.mycompany.mvcrepaso;
 
+import controlador.Controlador;
+import modelo.Modelo;
+import vista.Vista;
+
 /**
  *
  * @author diego
@@ -12,10 +16,12 @@ package com.mycompany.mvcrepaso;
 public class MVCrepaso {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         
+        Modelo modelo = new Modelo();
+        Vista vista = new Vista();
         
-        
-        
+        Controlador controlador = new Controlador(vista, modelo);
+        controlador.iniciar();
+        vista.setVisible(true);
     }
 }
